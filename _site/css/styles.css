@@ -1,0 +1,43 @@
+.article-image {
+  max-height: 80vh;
+  aspect-ratio: 0.723;
+  flex-basis: 10rem;
+  flex-grow: 1;
+}
+
+article {
+  flex-basis: 0;
+  flex-grow: 999;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main > * + * {
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: "Open Sans", Sans-Serif;
+  font-size: 15px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", Sans-Serif;
+  font-size: 44px;
+}
