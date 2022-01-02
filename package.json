@@ -4,6 +4,8 @@
   "description": "Sheridan's blog",
   "main": "index.js",
   "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

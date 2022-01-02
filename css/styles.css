@@ -39,5 +39,19 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", Sans-Serif;
+}
+h1 {
   font-size: 44px;
+}
+h1 a,
+nav a {
+  text-decoration: unset;
+  color: inherit;
+}
+nav {
+  display: flex;
+  font-size: 24px;
+}
+nav * + * {
+  margin-left: 1em;
 }
