@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const md = require("markdown-it")();
 
 // function to get blogposts
 async function getAllBlogposts() {
@@ -30,7 +31,11 @@ async function getAllBlogposts() {
     }
 
     // update blogpost array with the data from the JSON response
-    blogposts = blogposts.concat(response);
+    const responseHTML = response.map((blogpost) => ({
+      ...blogpost,
+      content: md.render(blogpost.content),
+    }));
+    blogposts = blogposts.concat(responseHTML);
   } catch (error) {
     throw new Error(error);
   }
